@@ -1,0 +1,47 @@
+{
+	"name": "pi-image-limits",
+	"version": "0.1.0",
+	"description": "Pi extension that sizes images and trims them from requests the way Claude Code does, for every model",
+	"type": "module",
+	"license": "MIT",
+	"keywords": [
+		"pi-package",
+		"pi-extension",
+		"images"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/YanzuoLu/pi-image-limits.git"
+	},
+	"homepage": "https://github.com/YanzuoLu/pi-image-limits#readme",
+	"pi": {
+		"extensions": [
+			"./src/index.ts"
+		]
+	},
+	"files": [
+		"src",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest --run",
+		"check": "npm run typecheck && npm run test"
+	},
+	"dependencies": {
+		"@silvia-odwyer/photon-node": "0.3.4"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*"
+	},
+	"devDependencies": {
+		"@earendil-works/pi-coding-agent": "^0.87.1",
+		"@types/node": "^22.10.2",
+		"typescript": "^5.7.2",
+		"vitest": "^2.1.8"
+	},
+	"engines": {
+		"node": ">=20"
+	}
+}
